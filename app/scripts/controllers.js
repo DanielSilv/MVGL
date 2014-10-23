@@ -34,16 +34,11 @@ angular.module('MVGL.controllers', [])
   }
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'RTS', id: 1 },
-    { title: 'RPG', id: 2 },
-    { title: 'MMORPG', id: 3 },
-    { title: 'Shooter', id: 4 },
-    { title: 'Platformer', id: 5 },
-    { title: 'Simulator', id: 6 }
-  ];
+.controller('PlaylistsCtrl', function($scope, GameService) {
+  $scope.playlists = GameService.getGenres();
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams, GameService) {
+  console.log($stateParams);
+  $scope.playlist = GameService.getGenreTitle($stateParams.playlistId);
 });
