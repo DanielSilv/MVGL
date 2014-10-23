@@ -14,6 +14,10 @@ angular.module('MVGL.services', [])
   this.getGenres = function () {
     return genres;
   };
+
+  this.getGenreTitle = function (genreId) {
+    return _.find(genres, { id: parseInt(genreId) }).title;
+  };
 });
 
 
