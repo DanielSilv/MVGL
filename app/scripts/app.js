@@ -54,26 +54,26 @@ angular.module('MVGL',[
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.genres', {
+      url: '/genres',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/genres.html',
+          controller: 'GenresCtrl'
         }
       }
     })
 
-    .state('app.single', {
-      url: '/playlists/:playlistId',
+    .state('app.genre', {
+      url: '/genres/:genreId',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/genre.html',
+          controller: 'GenreCtrl'
         }
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/genres');
 });
 
