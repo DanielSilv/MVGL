@@ -1,5 +1,16 @@
 <ion-view title="{{genre}}">
-  <ion-content class="has-header">
-    <h1>{{genre}}</h1>
-  </ion-content>
+    <ion-content class="has-header">
+        <div class="list">
+
+        <a ng-repeat="game in games" 
+           href="#/{{game.id}}"
+           class="item item-thumbnail-left">
+
+          <img ng-src="{{ game.image }}">
+          <h2>{{ game.gameName }}</h2>
+          <h4>{{ game.dev }}</h4>
+        </a>
+
+      </div>
+    </ion-content>
 </ion-view>

@@ -10,6 +10,9 @@ angular.module('MVGL.services', [])
     { title: 'Platformer', id: 5 },
     { title: 'Simulator', id: 6 }
   ];
+  var games = [
+    { genres: [4], id: 1, gameName: 'Halo 4', dev: '343 Studios', image: 'http://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png' }
+  ];
 
   this.getGenres = function () {
     return genres;
@@ -17,6 +20,12 @@ angular.module('MVGL.services', [])
 
   this.getGenreTitle = function (genreId) {
     return _.find(genres, { id: parseInt(genreId) }).title;
+  };
+    
+  this.getGamesByGenre = function(genreId) {
+    return _.filter(games, function(game) {
+      return _.contains(game.genres, parseInt(genreId));
+    });
   };
 });
 

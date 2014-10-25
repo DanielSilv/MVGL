@@ -69,7 +69,7 @@ angular.module('MVGL',[
       views: {
         'menuContent' :{
           templateUrl: 'templates/genre.html',
-          controller: 'GenreCtrl'
+          controller: 'GameCtrl'
         }
       }
     });
