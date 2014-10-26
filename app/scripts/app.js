@@ -46,14 +46,6 @@ angular.module('MVGL',[
       }
     })
 
-    .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent' :{
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
     .state('app.genres', {
       url: '/genres',
       views: {
@@ -69,6 +61,16 @@ angular.module('MVGL',[
       views: {
         'menuContent' :{
           templateUrl: 'templates/genre.html',
+          controller: 'GenreCtrl'
+        }
+      }
+    })
+
+    .state('app.game', {
+      url: '/game/:gameId',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/game.html',
           controller: 'GameCtrl'
         }
       }
