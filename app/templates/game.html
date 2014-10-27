@@ -1,10 +1,36 @@
 <ion-view title="{{game}}">
   <ion-content class="has-header">
+    <!-- Card Entry -->
     <div class="list card">
-      <div class="item item-avatar">
-        <img src="{{gameImage}}">
-        <h2>{{game}}</h2>
+      <!-- Main Header -->
+      <div class="item row">
+        <div class="col"><img class="full-image" src="{{gameImage}}"></div>
+        <div class="col">
+          <button class="button button-full button-positive">Add to my list</button>
+          <button class="button button-full button-positive">Rate</button>
+          <button class="button button-full button-positive">Buy Now</button>
+        </div>
       </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col">Platform</div>
+          <div class="col">PC</div>
+        </div>
+        <div class="row">
+          <div class="col">Release Date</div>
+          <div class="col">11/13/2007</div>
+        </div>
+        <div class="row">
+          <div class="col">ESRB</div>
+          <div class="col">M - Mature</div>
+        </div>
+        <div class="row">
+          <div class="col">Players</div>
+          <div class="col">4+</div>
+        </div>
+      </div>
+
     </div>
   </ion-content>
 </ion-view>
