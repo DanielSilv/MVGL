@@ -25,7 +25,9 @@ angular.module('MVGL.services', [])
     { title: 'Life Simulation', id: 19 }
   ];
   var games = [
-    { genres: [1,2], id: 1, gameName: 'Halo 4', dev: '343 Studios', image: 'http://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png' }
+    { genres: [1,2], id: 1, gameName: 'Halo 4', dev: '343 Studios', image: 'http://upload.wikimedia.org/wikipedia/en/9/92/Halo_4_box_artwork.png' },
+    { genres: [9], id: 2, gameName: 'Super Smash Bros.', dev: 'Nintendo', image: 'http://img2.wikia.nocookie.net/__cb20130611234145/nintendo/en/images/a/a0/SSB4_Logo.jpg' },
+    { genres: [1, 2, 7], id: 3, gameName: 'Borderlands', dev: 'Gearbox', image: 'http://upload.wikimedia.org/wikipedia/en/0/01/Borderlandscover.jpg' }
   ];
 
   this.getGenres = function () {
@@ -34,6 +36,14 @@ angular.module('MVGL.services', [])
 
   this.getGenreTitle = function (genreId) {
     return _.find(genres, { id: parseInt(genreId) }).title;
+  };
+  
+  this.getGameTitle = function (gameId) {
+    return _.find(games, { id: parseInt(gameId) }).gameName;
+  };
+  
+  this.getGameImage = function (gameId) {
+    return _.find(games, { id: parseInt(gameId) }).image;
   };
     
   this.getGamesByGenre = function(genreId) {

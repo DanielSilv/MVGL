@@ -44,5 +44,7 @@ angular.module('MVGL.controllers', [])
 })
 
 .controller('GameCtrl', function($scope, $stateParams, GameService) {
+  $scope.game = GameService.getGameTitle($stateParams.gameId);
+  $scope.gameImage = GameService.getGameImage($stateParams.gameId);
   console.log('TODO');
 });
