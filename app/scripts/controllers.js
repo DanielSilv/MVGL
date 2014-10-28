@@ -43,8 +43,11 @@ angular.module('MVGL.controllers', [])
   $scope.genre = GameService.getGenreTitle($stateParams.genreId);
 })
 
+.controller('GamelistCtrl', function($scope, GameService) {
+
+})
+
 .controller('GameCtrl', function($scope, $stateParams, GameService) {
   $scope.game = GameService.getGameTitle($stateParams.gameId);
   $scope.gameImage = GameService.getGameImage($stateParams.gameId);
-  console.log('TODO');
 });

@@ -65,6 +65,46 @@ angular.module('MVGL',[
         }
       }
     })
+  
+  .state('app.playing', {
+      url: '/playing',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/gamelist.html',
+          controller: 'GamelistCtrl'
+        }
+      }
+    })
+  
+  .state('app.completed', {
+      url: '/completed',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/gamelist.html',
+          controller: 'GamelistCtrl'
+        }
+      }
+    })
+  
+  .state('app.dropped', {
+      url: '/dropped',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/gamelist.html',
+          controller: 'GamelistCtrl'
+        }
+      }
+    })
+  
+  .state('app.wishlist', {
+      url: '/wishlist',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/gamelist.html',
+          controller: 'GamelistCtrl'
+        }
+      }
+    })
 
     .state('app.game', {
       url: '/game/:gameId',
